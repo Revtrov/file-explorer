@@ -1,0 +1,408 @@
+:root {
+    --bg-color: #2D2D30;
+    --title-text-color: #ADADAD;
+    --text-color: #CCC;
+    --shadow-color: #000;
+    --hover-color: rgba(255, 255, 255, 0.1);
+    --headbar-bg-color: rgba(50, 54, 57, 1);
+    --box-shadow-color: #282b2e;
+    --border-color: #68217A
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    user-select: none
+}
+
+body {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-bottom: 24px solid var(--border-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+#borderThing {
+    background-color: var(--bg-color);
+    position: fixed;
+    right: 0;
+    top: 33px;
+    width: calc(80% + 1px);
+    height: calc(100vh - 48px);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-top: 1px var(--border-color) solid;
+    border-right: 1px var(--border-color) solid;
+    z-index: 40;
+    border-radius: 0 25px 15px 0;
+    overflow: hidden
+}
+
+#settings-title-bar {
+    -webkit-app-region: drag;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    color: var(--title-text-color);
+    font-family: sans-serif;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 20px 20px 0 0
+}
+
+#title-bar {
+    -webkit-app-region: drag;
+    height: 32px;
+    padding: 0;
+    margin: 0;
+    color: var(--title-text-color);
+    font-family: sans-serif;
+    background-color: var(--bg-color)
+}
+
+#title {
+    position: fixed;
+    top: 0;
+    left: 12px;
+    line-height: 32px;
+    font-size: 14px
+}
+
+#title-bar-btns {
+    -webkit-app-region: no-drag;
+    position: fixed;
+    top: 1px;
+    right: 1px
+}
+
+#title-bar-btns button {
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    overflow: hidden
+}
+
+#title-bar-btns button:hover {
+    background-color: var(--hover-color)
+}
+
+#close-btn {
+    padding-bottom: 60px;
+    border-radius: 10px 0 0 0;
+    padding-top: 6px;
+    overflow: hidden!important
+}
+
+#close-btn:hover {
+    background-color: red!important;
+    z-index: 1;
+    overflow: hidden
+}
+
+#min-btn-text {
+    position: relative;
+    top: -10%
+}
+
+#close-btn-text {
+    position: relative;
+    top: 5%
+}
+
+#content {
+    padding: 12px;
+    color: var(--text-color)
+}
+
+embed {
+    background-color: var(--bg-color);
+    position: fixed;
+    right: 0;
+    top: 33px;
+    width: calc(80% + 1px);
+    height: calc(100vh - 48px);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-top: 1px var(--border-color) solid;
+    border-right: 1px var(--border-color) solid;
+    z-index: 100;
+    border-radius: 0 25px 15px 0;
+    overflow: hidden
+}
+
+img,
+video {
+    background-color: var(--bg-color);
+    position: fixed;
+    left: calc(1px + 20%);
+    top: 89px;
+    height: auto;
+    width: auto;
+    max-width: calc(80% - 21px);
+    max-height: calc(100vh - 113px);
+    z-index: 100;
+    overflow: hidden
+}
+
+#viewText {
+    background-color: var(--bg-color);
+    position: fixed;
+    left: calc(1px + 24% - 17.5px);
+    top: 114px;
+    width: calc(76% - 26px);
+    height: calc(100vh - 133px);
+    z-index: 100;
+    overflow-wrap: break-word;
+    line-height: 40px;
+    overflow-y: scroll;
+    padding-right: 5px
+}
+
+#viewText::-webkit-scrollbar {
+    width: 12px
+}
+
+#viewText::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px
+}
+
+#viewText::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px var(--border-color)
+}
+
+#headbar {
+    text-align: center;
+    position: fixed;
+    top: 33px;
+    left: 0;
+    margin: 0;
+    height: 55px;
+    width: calc(100% - 2px);
+    z-index: 101;
+    background-color: var(--headbar-bg-color);
+    box-shadow: 0 5px 8px -8px var(--box-shadow-color);
+    border-radius: 25px 25px 0 0;
+    border-top: 1px var(--border-color) solid;
+    border-left: 1px var(--border-color) solid
+}
+
+#fileTitle {
+    position: relative;
+    font-size: 25px;
+    top: calc(50% - 13px)
+}
+
+#settings {
+    cursor: default;
+    position: fixed;
+    left: 10px;
+    top: 45px;
+    font-size: 28px;
+    font-weight: 10px;
+    border-radius: 7.5px;
+    box-sizing: border-box;
+    width: 37.5px;
+    text-align: center;
+    padding-bottom: 2px
+}
+
+#settings:hover {
+    background: var(--hover-color)
+}
+
+#add {
+    cursor: default;
+    position: fixed;
+    left: 50px;
+    top: 45px;
+    font-size: 28px;
+    font-weight: 10px;
+    box-sizing: border-box;
+    width: 37.5px;
+    text-align: center;
+    border-radius: 7.5px;
+    padding-bottom: 2px
+}
+
+#add:hover {
+    background: rgba(255, 255, 255, 0.1)
+}
+
+#sudoAdd {
+    cursor: default;
+    position: fixed;
+    left: 17.1%;
+    top: 43.6719px;
+    font-size: 28px;
+    font-weight: 10px
+}
+
+.inputAdd {
+    opacity: 0
+}
+
+#fileContainer {
+    position: fixed;
+    left: 1px;
+    top: 89.42px;
+    width: calc(20% - 3px);
+    text-align: center;
+    z-index: 10000;
+    border-radius: 0 0 25px 25px;
+    height: calc(100vh - 12px - 32px - 59px);
+    background-color: var(--bg-color);
+    border-radius: 0 0 0 15px
+}
+
+#files {
+    overflow: scroll;
+    height: calc(100vh - 34px - 32px - 11px - 59px);
+    z-index: 100;
+    padding-left: 12px;
+    border-radius: 0 0 25px 25px
+}
+
+#files::-webkit-scrollbar {
+    opacity: 0
+}
+
+ ::-webkit-scrollbar-corner {
+    opacity: 0
+}
+
+#dropdownBtn {
+    display: inline-block;
+    position: fixed;
+    left: 3%;
+    top: 107.375px;
+    transform: rotate(-90deg)
+}
+
+#folderName {
+    padding-top: 17.5px;
+    padding-bottom: 15px;
+    box-shadow: 0 6px 8px -8px #000;
+    width: calc(100% + 4px)
+}
+
+#folderName:hover {
+    background-color: var(--hover-color)
+}
+
+.filesInFolder {
+    position: relative;
+    left: -7px;
+    top: 0;
+    width: calc(95% - 12.5px);
+    height: auto;
+    word-wrap: break-word;
+    margin-top: 15px;
+    margin-left: auto;
+    user-select: none;
+    padding: 3px;
+    text-align: center;
+    border: .5px transparent solid
+}
+
+.filesInFolder:hover {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+    border: .5px var(--border-color) solid
+}
+
+.filesInFolder:focus {
+    background-color: var(--hover-color);
+    border-radius: 5px;
+    border: 1px var(--border-color) solid
+}
+
+#musicViewport {
+    position: fixed;
+    right: 1px;
+    top: 32px;
+    width: calc(80% - 1px);
+    height: calc(100vh - 32px);
+    align-items: center;
+    text-align: center;
+    justify-content: center
+}
+
+body>img {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+
+#settingsWindow {
+    position: fixed;
+    left: 10px;
+    top: 100px;
+    height: 300px;
+    width: 250px;
+    background: var(--headbar-bg-color);
+    z-index: 10;
+    border: 1px var(--border-color) solid;
+    border-radius: 20px
+}
+
+#settingsWindowBackground {
+    background-color: transparent!important;
+    border-radius: 20px
+}
+
+#settingsItemContainer {
+    position: relative;
+    top: -30px;
+    padding: 30px;
+    margin-top: 30px;
+    height: calc(100% - 92px);
+    background-color: var(--headbar-bg-color)
+}
+
+.settingsCheckboxes {
+    position: relative;
+    top: 1.75px;
+    white-space: nowrap
+}
+
+.settingsTextInput {
+    border: 1px var(--border-color) solid;
+    outline: none;
+    color: var(--text-color);
+    background-color: var(--headbar-bg-color);
+    margin-top: 2.5px
+}
+
+.settingsTextInput:hover,
+.settingsTextInput:focus-within {
+    background-color: var(--bg-color)
+}
+
+#settingsItem {
+    color: var(--text-color);
+    padding-top: 5px
+}
+
+#settings-close-btn {
+    border-radius: 0 19px 0 0
+}
+
+#settings-close-btn:hover {
+    background-color: #ff4d4d!important
+}

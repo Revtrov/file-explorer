@@ -1,0 +1,8 @@
+.desktop {
+    background-image: url("../images/umbrellaBackground.jpg");
+    background-size: cover;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+}

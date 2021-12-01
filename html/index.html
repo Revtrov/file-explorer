@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' ; img-src *;">
+    <title>Revtrov Sheet Music App</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' http:, img-src 'self' http:, script-src 'self' 'unsafe-eval'">
+</head>
+
+<body>
+    <div id="title-bar">
+        <div id="title">File Viewer</div>
+        <div id="title-bar-btns">
+            <button id="min-btn"><span id="min-btn-text">🗕</span></button>
+            <button id="max-btn">🗖</button>
+            <button id="close-btn"><span id="close-btn-text">✖</span></button>
+        </div>
+    </div>
+    <div id="content">
+        <div id="fileMenu">
+            <div id="headbar">
+                <div id="add" title="open folder" tabindex=0>🗎</div>
+                <div id="settings" title="settings" tabindex=0>⚙</div>
+                <span id="fileTitle"></span>
+            </div>
+            <div id="fileContainer">
+                <div id="dropdownBtn">∨</div>
+                <div id="folderName" title="current folder name" tabindex=0>pdf folder</div>
+                <div id="files"></div>
+            </div>
+        </div>
+        <div id="borderThing"></div>
+        <embed id="viewport" src="">
+        <img src="" title="" alt="img" id="viewImg">
+        <video src="" id="viewVideo" controls></video>
+        <div id="viewText"></div>
+    </div>
+
+    <script src='../js/index.js'></script>
+</body>
+
+</html>

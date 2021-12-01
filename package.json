@@ -1,0 +1,71 @@
+{
+  "name": "windows",
+  "version": "1.0.0",
+  "description": "gonna try and make windows lets go",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Revtrov",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.57",
+    "@electron-forge/maker-deb": "^6.0.0-beta.57",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
+    "@electron-forge/maker-zip": "^6.0.0-beta.57",
+    "electron": "^13.1.4"
+  },
+  "dependencies": {
+    "@comix/parser": "^0.1.0",
+    "comic-reader": "^0.6.2",
+    "comics2video": "^2.2.0",
+    "cross-unzip": "^0.2.1",
+    "custom-electron-titlebar": "^3.2.7",
+    "decamelize": "^1.2.0",
+    "deltree": "^1.2.8",
+    "docx-pdf": "^0.0.1",
+    "docx4js": "^3.2.17",
+    "electron-squirrel-startup": "^1.0.0",
+    "eventemitter3": "^4.0.7",
+    "ffmpeg-static": "^4.4.0",
+    "grunt-comic-extract": "^0.1.6",
+    "jquery": "^3.6.0",
+    "jsdom": "^16.6.0",
+    "libreoffice-convert": "^1.3.2",
+    "photonkit": "^0.1.2",
+    "random-vagina": "^1.0.0",
+    "sharp": "^0.28.3",
+    "unique-random-array": "^3.0.0",
+    "win-7zip": "^0.1.1"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "windows"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

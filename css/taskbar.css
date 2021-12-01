@@ -1,0 +1,103 @@
+:root {
+    --taskbar-height: 5.25vh;
+    --accent-color: #5c0600;
+}
+
+.taskbar {
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    height: var(--taskbar-height);
+    width: 100%;
+    background-color: var(--accent-color);
+    display: grid;
+    grid-template-rows: var(--taskbar-height);
+    align-items: left;
+    justify-content: left;
+}
+
+#startButton {
+    height: var(--taskbar-height);
+    width: auto;
+    padding-top: 1.5vh;
+    padding-left: 2.1vh
+}
+
+#startMenuButtonIcon {
+    height: 40%;
+    width: 49%;
+}
+
+#searchBar {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: orange;
+}
+
+#searchbarInput {
+    padding: 0px;
+    height: calc(var(--taskbar-height) - 5px);
+    width: calc(100% - 5px);
+    border: 2.5px var(--accent-color) solid;
+}
+
+#taskView {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: yellow;
+}
+
+#pinnedApps {
+    padding-left: 4px;
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: black;
+}
+
+#hiddenIcons {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: green;
+}
+
+#battery {
+    width: auto;
+    height: var(--taskbar-height);
+    background-color: blue;
+}
+
+#sound {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: purple;
+}
+
+.internetAccess {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: magenta;
+}
+
+#keyboard {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: rgb(62, 97, 29);
+}
+
+#clock {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: mediumaquamarine;
+}
+
+#actionCenter {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: teal;
+}
+
+#showDesktop {
+    height: var(--taskbar-height);
+    width: auto;
+    background-color: grey;
+}
